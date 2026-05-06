@@ -1,14 +1,11 @@
 :root {
-  --color-ink: #1f2933;
-  --color-muted: #52616b;
-  --color-surface: #f7f9fb;
-  --color-surface-strong: #e7edf2;
-  --color-border: #b8c2cc;
-  --color-brand: #164e3f;
-  --color-brand-dark: #0d3329;
-  --color-accent: #f2b544;
-  --color-accent-dark: #b75f2a;
-  --color-teal: #0e8f8a;
+  --color-ink: #dff6ff;
+  --color-surface: #050a30;
+  --color-surface-strong: #000c66;
+  --color-brand: #000c66;
+  --color-brand-dark: #050a30;
+  --color-accent: #7ec8e3;
+  --color-accent-dark: #0000ff;
   --color-white: #fff;
 }
 
@@ -16,7 +13,7 @@ body {
   min-width: 320px;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--color-ink);
-  background-color: var(--color-white);
+  background-color: var(--color-surface);
 }
 
 .custom-border {
@@ -24,7 +21,7 @@ body {
 }
 
 .navbar-custom {
-  background-color: var(--color-brand-dark);
+  background-color: var(--color-brand);
 }
 
 .navbar-content {
@@ -45,14 +42,14 @@ body {
 
 .nav-masthead .nav-link {
   padding: 0.25rem 0;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(223, 246, 255, 0.75);
   background-color: transparent;
   border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(242, 181, 68, 0.55);
+  border-bottom-color: rgba(126, 200, 227, 0.65);
 }
 
 .nav-masthead .active {
@@ -65,81 +62,27 @@ body {
 }
 
 .custom-btn-register {
-  color: var(--color-brand-dark);
-  background-color: var(--color-accent);
+  color: var(--color-white);
+  background-color: var(--color-accent-dark);
   border: none;
 }
 
 .custom-btn-register:hover,
 .custom-btn-register:focus {
   color: var(--color-brand-dark);
-  background-color: #ffd36b;
+  background-color: var(--color-accent);
 }
 
 .custom-btn-login {
   color: var(--color-brand-dark);
-  background-color: var(--color-white);
+  background-color: var(--color-accent);
   border: none;
 }
 
 .custom-btn-login:hover,
 .custom-btn-login:focus {
-  color: var(--color-brand-dark);
-  background-color: var(--color-surface-strong);
-}
-
-.custom-background-gray {
-  background-color: var(--color-surface-strong);
-}
-
-.custom-border-black {
-  border: 1px solid var(--color-border);
-}
-
-.custom-text-gray-title {
-  color: var(--color-brand);
-  font-weight: 700;
-  text-align: center;
-}
-
-.project-logo {
-  width: 100%;
-  height: 225px;
-  object-fit: contain;
-}
-
-.custom-feature-list {
-  padding-left: 0;
-  color: var(--color-muted);
-  list-style: none;
-}
-
-.custom-feature-list li::before {
-  content: "-> ";
-  color: var(--color-teal);
-  font-weight: 700;
-}
-
-.custom-btn-github {
-  width: 100%;
-  height: auto;
   color: var(--color-white);
-  background-color: var(--color-brand);
-  border: none;
-}
-
-.custom-btn-github:hover,
-.custom-btn-github:focus {
-  color: var(--color-white);
-  background-color: var(--color-accent-dark);
-}
-
-.album.bg-body-tertiary {
-  background-color: var(--color-surface) !important;
-}
-
-.card {
-  background-color: var(--color-white);
+  background-color: var(--color-surface-strong);
 }
 
 .construction-image {

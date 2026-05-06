@@ -1,0 +1,46 @@
+<header>
+  <div class="px-3 py-2 text-bg-dark navbar-custom custom-border mb-3">
+    <div
+      class="container-fluid navbar-content d-flex align-items-center justify-content-center flex-wrap gap-4"
+    >
+      <div class="d-flex flex-wrap gap-2 align-items-center auth-actions">
+        <button type="button" class="btn btn-light custom-btn-login m-2">
+          Entrar
+        </button>
+        <button type="button" class="btn btn-primary custom-btn-register m-2">
+          Cadastrar-se
+        </button>
+      </div>
+
+      <nav
+        id="navegacao-principal"
+        class="nav-masthead d-flex justify-content-center gap-3"
+        aria-label="Navegacao principal"
+      >
+        {% for item in nav_items %}
+          {% set is_active = active_page == item.endpoint %}
+          {% set icon = item.active_icon if is_active else item.inactive_icon %}
+
+          <a
+            href="{{ url_for(item.endpoint) }}"
+            class="nav-link text-white text-center {% if is_active %}active{% endif %}"
+            {% if is_active %}aria-current="page"{% endif %}
+          >
+            <img
+              src="{{ url_for('static', filename='images/' ~ icon) }}"
+              width="24"
+              height="24"
+              alt=""
+              aria-hidden="true"
+            />
+            <span
+              class="{% if is_active %}d-block text-active{% else %}d-block{% endif %}"
+            >
+              {{ item.label }}
+            </span>
+          </a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</header>
