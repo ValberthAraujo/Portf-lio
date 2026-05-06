@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} | Valberth{% endblock %}
+
+{% block content %}
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <img src="{{ url_for('static', filename='images/' ~ logo) }}" width="80" height="80" alt="{{ logo_alt }}" class="mb-4">
+        <h1 class="fw-light">{{ title }}</h1>
+        <p class="lead text-body-secondary">{{ description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+        {% for item in items %}
+          <div class="col py-2">
+            <article class="card shadow-sm custom-border-black h-100">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h2 class="h6 card-title custom-text-gray-title">{{ item.title }}</h2>
+                <a href="{{ item.href }}" class="btn btn-sm btn-outline-primary mt-3 custom-btn-github" target="_blank" rel="noopener noreferrer">
+                  Abrir -&gt;
+                </a>
+              </div>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

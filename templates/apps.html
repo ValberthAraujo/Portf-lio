@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Apps | Valberth{% endblock %}
+
+{% block content %}
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <img src="{{ url_for('static', filename='images/coming_soon_2.svg') }}" width="200" height="200" alt="Em construcao" class="mb-4 construction-image">
+        <h1 class="fw-light">Em Construcao...</h1>
+        <p class="lead text-body-secondary">
+          Ainda estou terminando as planilhas/dashboards.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

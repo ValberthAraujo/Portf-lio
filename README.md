@@ -1,11 +1,12 @@
-# Portfólio
+# Portfolio
 
-Frontend em React para apresentar planilhas, dashboards e aplicativos.
+Aplicacao Flask para apresentar planilhas, dashboards e aplicativos.
 
-## Scripts
+## Como executar
 
 ```bash
-npm install
-npm run dev
-npm run build
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install -r requirements.txt
+flask --app app run --debug
 ```
